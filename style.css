@@ -25,7 +25,7 @@ li {
   row-gap: 10px;
   margin: 0;
   padding: 0;
-  background-image: url(../images/fondo.jpeg);
+  background-image: url(../images/fondotodo.jpg);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -59,6 +59,7 @@ li {
   grid-area: main;
   min-height: 100vh;
   margin-top: 100px;
+  
 }
 
 .tarjetas {
@@ -165,6 +166,9 @@ li {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  position:relative;
+  margin-top: auto;
+  text-align: center;
 }
 
 .footerRedes {
@@ -180,23 +184,19 @@ li {
 /* INICIO ESTILOS PAGES */
 
 #body {
-  display: grid;
-  grid-template-areas: 
-  "header header header" 
-  "main main main" 
-  "main main main" 
-  "footer footer footer";
-  grid-template-columns: 300px 1fr 200px;
-  grid-template-rows: 300px 1fr 1fr 100px;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  column-gap: 20px;
-  row-gap: 10px;
   margin: 0;
-  padding: 0;
-  background: url(../images/fondo.png);
+  background: url(../images/fondotodo.jpg);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
+}
+
+#main {
+  flex: 1;
+  
 }
 
 
@@ -209,7 +209,8 @@ li {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .titulo {
@@ -226,18 +227,19 @@ li {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1500px;
+  max-width: 1200px;
   justify-content: center;
-  
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .text-section {
-  flex: 1 1 600px;
+  flex: 1 1 20px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  box-sizing: border-box;
 }
 
 .text-section h2 {
@@ -251,7 +253,6 @@ li {
 }
 
 .imagenes {
-  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -265,9 +266,31 @@ li {
 }
 
 @media (max-width: 768px) {
+  .text-section,
+  .imagenes {
+    flex: 1 1 100%; 
+  }
+
   .content {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-section h2 {
+    font-size: 1rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .imagenes img {
+    width: 100%; 
   }
 }
 
