@@ -378,15 +378,16 @@ li {
 .boxPadre{
   display: flex;
   flex-direction: row;
-column-gap: 100px;
+  gap: 30px;
 }
 
 .box {
   
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 500px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-  margin-top: 200px;
+  margin-top: 100px;
 
 
 }
@@ -395,6 +396,13 @@ column-gap: 100px;
   transform: scale(1.1);
   transition: 1s;
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.7));
+}
+
+@media screen and (max-width: 768px) {
+  .boxPadre {
+    flex-direction: column; 
+    align-items: center; 
+  }
 }
 
 /* FIN RECOMENDACIONES */
