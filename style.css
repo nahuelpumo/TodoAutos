@@ -365,7 +365,7 @@ li {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-image: url(../images/fondotodo.jpg);
+  background-image: url(images/fondotodo.jpg);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -406,7 +406,7 @@ column-gap: 100px;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-image: url(../images/fondotodo.jpg);
+  background-image: url(images/fondotodo.jpg);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
