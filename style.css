@@ -20,7 +20,6 @@ li {
   grid-area: footer;
   background-color: rgb(48, 44, 49);
   width: 100%;
-  color: white;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -29,6 +28,10 @@ li {
   position: relative;
   margin-top: auto;
   text-align: center;
+}
+
+.footerRights {
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -55,7 +58,7 @@ li {
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.7));
 }
 
-/* INICIO ESTILOS INDEX */
+/* ESTILOS BODY */
 #bodyIndex {
   display: grid;
   grid-template-areas: "header header header" "main main main" "main main main" "footer footer footer";
@@ -72,16 +75,11 @@ li {
   font-family: sans-serif;
 }
 
-.borde {
-  border: 1px r solid;
-}
-
 /* ESTILOS HEADER */
 #headerIndex {
   grid-area: header;
   width: 100%;
   height: 100%;
-  background-color: white;
   background-image: url(images/slogan.png);
   background-size: cover;
   background-position: center;
@@ -107,118 +105,67 @@ li {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
-.card1 {
-  grid-area: card1;
+.card {
+  background-color: grey;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: transform 1s;
 }
 
-.card1:hover {
+.card:hover {
   transform: scale(1.1);
-  transition: 1s;
-}
-
-.card2 {
-  grid-area: card2;
-}
-
-.card2:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-.card3 {
-  grid-area: card3;
-}
-
-.card3:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-.card4 {
-  grid-area: card4;
-}
-
-.card4:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-.card5 {
-  grid-area: card5;
-}
-
-.card5:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-.card6 {
-  grid-area: card6;
-}
-
-.card6:hover {
-  transform: scale(1.1);
-  transition: 1s;
 }
 
 .img {
   width: 100%;
 }
 
-.card {
-  background-color: grey;
-  color: black;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  display: inline;
-}
-
-.carrousel {
-  align-content: center;
-}
-
-/* FIN ESTILOS MAIN */
+/* GRID IMG */
 .gridImages img {
   width: 100%;
   height: 100%;
   padding: 5px;
 }
 
-.img1 {
-  grid-area: img1;
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  #bodyIndex {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "main" "footer";
+    row-gap: 20px;
+  }
+  .tarjetas {
+    grid-template-areas: "card1 card2" "card3 card4" "card5 card6";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
-
-.img2 {
-  grid-area: img2;
+@media (max-width: 768px) {
+  #bodyIndex {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "main" "footer";
+    column-gap: 10px;
+  }
+  .tarjetas {
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6" "card7" "card8" "card9";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  #headerIndex {
+    height: 200px;
+    background-size: contain;
+  }
 }
-
-.img3 {
-  grid-area: img3;
+@media (max-width: 480px) {
+  #bodyIndex {
+    padding: 10px;
+  }
+  .tarjetas {
+    row-gap: 15px;
+  }
 }
-
-.img4 {
-  grid-area: img4;
-}
-
-.img5 {
-  grid-area: img5;
-}
-
-.img6 {
-  grid-area: img6;
-}
-
-.img7 {
-  grid-area: img7;
-}
-
-.img8 {
-  grid-area: img8;
-}
-
-.img9 {
-  grid-area: img9;
-}
-
 /* INICIO ESTILOS PAGES */
 #body {
   display: flex;
@@ -368,6 +315,11 @@ li {
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
+}
+
+#mainComunidad {
+  display: grid;
+  grid-template-columns: "img1 img2 img3" "img4 img5 img6";
 }
 
 .proximamente {

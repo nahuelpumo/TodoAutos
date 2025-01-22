@@ -1,172 +1,136 @@
-/* INICIO ESTILOS INDEX */
+/* ESTILOS BODY */
 #bodyIndex {
-    display: grid;
-    grid-template-areas: 
-    "header header header" 
-    "main main main" 
-    "main main main" 
-    "footer footer footer";
-    grid-template-columns: 300px 1fr 200px;
-    grid-template-rows: 300px 1fr 1fr 100px;
-    min-height: 100vh;
-    column-gap: 20px;
-    row-gap: 10px;
-    margin: 0;
-    padding: 0;
-    background-image: url(images/fondotodo.jpg);
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-  }
-  
-  .borde {
-    border: 1px r solid;
+  display: grid;
+  grid-template-areas: 
+      "header header header" 
+      "main main main" 
+      "main main main" 
+      "footer footer footer";
+  grid-template-columns: 300px 1fr 200px;
+  grid-template-rows: 300px 1fr 1fr 100px;
+  min-height: 100vh;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 0;
+  padding: 0;
+  background-image: url(images/fondotodo.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+/* ESTILOS HEADER */
+#headerIndex {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/slogan.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* ESTILOS MAIN */
+#mainIndex {
+  grid-area: main;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-areas: "card1 card2 card3" "card4 card5 card6" "card7 card8 card9";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-height: 100vh;
+  column-gap: 20px;
+  row-gap: 10px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+} 
+
+.card {
+  background-color: grey;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: transform 1s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.img {
+  width: 100%;
+}
+
+/* GRID IMG */
+.gridImages img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  #bodyIndex {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: 
+          "header"
+          "main"
+          "footer";
+      row-gap: 20px;
   }
 
-  /* ESTILOS HEADER */
-#headerIndex {
-    grid-area: header;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    background-image: url(images/slogan.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-  }
-  
-  /* ESTILOS MAIN */
-#mainIndex {
-    grid-area: main;
-    min-height: 100vh;
-    margin-top: 100px;
-    
-  }
-  
-  
   .tarjetas {
-    display: grid;
-    grid-template-areas: "card1 card2 card3" "card4 card5 card6" "card7 card8 card9";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    min-height: 100vh;
-    column-gap: 20px;
-    row-gap: 10px;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-  } 
-  
-  
-  
-  .card1 {
-    grid-area: card1;
+      grid-template-areas: 
+          "card1 card2"
+          "card3 card4"
+          "card5 card6";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
   }
-  
-  .card1:hover {
-    transform: scale(1.1);
-    transition: 1s;
+}
+
+@media (max-width: 768px) {
+  #bodyIndex {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: 
+          "header"
+          "main"
+          "footer";
+      column-gap: 10px;
   }
-  
-  .card2 {
-    grid-area: card2;
+
+  .tarjetas {
+      grid-template-areas: 
+          "card1"
+          "card2"
+          "card3"
+          "card4"
+          "card5"
+          "card6"
+          "card7"
+          "card8"
+          "card9";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
   }
-  
-  .card2:hover {
-    transform: scale(1.1);
-    transition: 1s;
+
+  #headerIndex {
+      height: 200px;
+      background-size: contain;
   }
-  
-  .card3 {
-    grid-area: card3;
+}
+
+@media (max-width: 480px) {
+  #bodyIndex {
+      padding: 10px;
   }
-  
-  .card3:hover {
-    transform: scale(1.1);
-    transition: 1s;
+
+  .tarjetas {
+      row-gap: 15px;
   }
-  
-  .card4 {
-    grid-area: card4;
-  }
-  
-  .card4:hover {
-    transform: scale(1.1);
-    transition: 1s;
-  }
-  
-  .card5 {
-    grid-area: card5;
-  }
-  
-  .card5:hover {
-    transform: scale(1.1);
-    transition: 1s;
-  }
-  
-  .card6 {
-    grid-area: card6;
-  }
-  
-  .card6:hover {
-    transform: scale(1.1);
-    transition: 1s;
-  }
-  
-  .img {
-    width: 100%;
-  }
-  
-  .card {
-    background-color: grey;
-    color: black;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    display: inline;
-  }
-  
-  .carrousel {
-    align-content: center;
-  }
-  
-  /* FIN ESTILOS MAIN */
-  .gridImages img {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-  }
-  
-  .img1 {
-    grid-area: img1;
-  }
-  
-  .img2 {
-    grid-area: img2;
-  }
-  
-  .img3 {
-    grid-area: img3;
-  }
-  
-  .img4 {
-    grid-area: img4;
-  }
-  
-  .img5 {
-    grid-area: img5;
-  }
-  
-  .img6 {
-    grid-area: img6;
-  }
-  
-  .img7 {
-    grid-area: img7;
-  }
-  
-  .img8 {
-    grid-area: img8;
-  }
-  
-  .img9 {
-    grid-area: img9;
-  }
-  
+}

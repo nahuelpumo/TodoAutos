@@ -10,6 +10,12 @@
     background-position: center;
     font-family: sans-serif;
   }
+
+  #mainComunidad {
+    display: grid;
+    grid-template-columns: "img1 img2 img3"
+                           "img4 img5 img6";
+  }
   
   .proximamente {
     display: flex;

@@ -3,7 +3,6 @@
     grid-area: footer;
     background-color: rgb(48, 44, 49);
     width: 100%;
-    color: white;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -14,6 +13,10 @@
     text-align: center;
     
     
+  }
+
+  .footerRights {
+    color: white;
   }
   
   @media (max-width: 768px) {
