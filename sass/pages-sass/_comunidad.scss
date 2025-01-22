@@ -1,0 +1,38 @@
+/* ESTILOS COMUNIDAD */
+
+#bodyComu {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(images/fondotodo.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+  
+  .proximamente {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    font-family: sans-serif;
+    font-size: large;
+    color: #fff;
+  }
+  
+  div > img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #000; 
+  }
+  .pruebaresp {
+    display: grid;
+    grid-template-columns: 
+    repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    );
+    gap: 32px;
+  
+  }
