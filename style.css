@@ -11,7 +11,7 @@ li {
 }
 
 .navbar {
-  background-color: rgb(48, 44, 49);
+  background-color: rgb(76, 73, 77);
   align-items: center;
 }
 
@@ -377,7 +377,7 @@ li {
     align-items: center;
   }
 }
-/* ESTILOS COMUNIDAD */
+/* ESTILOS EVENTOS */
 #bodyComu {
   display: grid;
   grid-template-areas: "header header header" "main main main" "main main main" "footer footer footer";
